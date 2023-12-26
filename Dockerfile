@@ -14,7 +14,12 @@ RUN apt-get update \
 ARG NIX_VERSION
 ENV NIX_VERSION=${NIX_VERSION}
 COPY entrypoint.sh /usr/local/share/entrypoint.sh
-RUN curl -sL https://releases.nixos.org/nix/nix-${NIX_VERSION}/install | sh -s -- --daemon \
+RUN mkdir -p /etc/nix \
+    && {\
+        echo "sandbox = false"; \
+        echo "experimental-features = nix-command flakes"; \
+    } > /etc/nix/nix.conf \
+    && curl -sL https://releases.nixos.org/nix/nix-${NIX_VERSION}/install | sh -s -- --daemon \
     && chmod +x /usr/local/share/entrypoint.sh
 
 ARG DEVBOX_VERSION
