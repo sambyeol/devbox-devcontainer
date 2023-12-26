@@ -7,6 +7,7 @@ Make a devcontainer setting file at `.devcontainer/devcontainer.json` in your pr
 ```json
 {
     "image": "ghcr.io/sambyeol/devbox-devcontainer",
+    "overrideCommand": false,
 	"postCreateCommand": "devbox install",
     "customizations": {
         "vscode": {
