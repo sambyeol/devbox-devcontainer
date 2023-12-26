@@ -18,7 +18,9 @@ RUN mkdir -p /etc/nix \
     && {\
         echo "sandbox = false"; \
         echo "experimental-features = nix-command flakes"; \
-    } > /etc/nix/nix.conf \
+        # https://github.com/NixOS/nix/issues/5258
+        echo "filter-syscalls = false"; \
+    } >> /etc/nix/nix.conf \
     && curl -sL https://releases.nixos.org/nix/nix-${NIX_VERSION}/install | sh -s -- --daemon \
     && chmod +x /usr/local/share/entrypoint.sh
 
