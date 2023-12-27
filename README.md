@@ -8,14 +8,7 @@ Make a devcontainer setting file at `.devcontainer/devcontainer.json` in your pr
 {
     "image": "ghcr.io/sambyeol/devbox-devcontainer",
     "overrideCommand": false,
-	"postCreateCommand": "devbox install",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "jetpack-io.devbox"
-            ]
-        }
-    }
+	"postCreateCommand": "devbox install"
 }
 ```
 Then, reopen in container.
