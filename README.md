@@ -1,4 +1,7 @@
 # Devcontainer with OCaml
+
+[![Build and deploy](https://github.com/sambyeol/devbox-devcontainer/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/sambyeol/devbox-devcontainer/actions/workflows/build-and-deploy.yml)
+
 Pre-installed [`devbox`](https://github.com/jetpack-io/devbox) for devcontainer.
 You can find the images in `ghcr.io/sambyeol/devbox-devcontainer`.
 
