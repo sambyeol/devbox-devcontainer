@@ -1,4 +1,4 @@
-# Devcontainer with OCaml
+# Devcontainer with Devbox
 
 [![Build and deploy](https://github.com/sambyeol/devbox-devcontainer/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/sambyeol/devbox-devcontainer/actions/workflows/build-and-deploy.yml)
 
