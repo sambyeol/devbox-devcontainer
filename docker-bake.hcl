@@ -24,8 +24,8 @@ target "dockerfile" {
 
 target "version" {
     args = {
-        NIX_VERSION = "2.20.0",
-        DEVBOX_VERSION = "0.8.7",
+        NIX_VERSION = "2.20.1",
+        DEVBOX_VERSION = "0.9.1",
     }
 }
 
