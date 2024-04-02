@@ -24,16 +24,16 @@ target "dockerfile" {
 
 target "version" {
     args = {
-        NIX_VERSION = "2.20.1",
-        DEVBOX_VERSION = "0.9.1",
+        NIX_VERSION = "2.21.1",
+        DEVBOX_VERSION = "0.10.3",
     }
 }
 
 target "latest" {
     inherits = ["version", "dockerfile", "cross_platform"]
     tags =[
-        "ghcr.io/sambyeol/devbox-devcontainer:0.9.1",
-        "ghcr.io/sambyeol/devbox-devcontainer:0.9",
+        "ghcr.io/sambyeol/devbox-devcontainer:0.10.3",
+        "ghcr.io/sambyeol/devbox-devcontainer:0.10",
         "ghcr.io/sambyeol/devbox-devcontainer:0",
         "ghcr.io/sambyeol/devbox-devcontainer:latest",
     ]
@@ -42,8 +42,8 @@ target "latest" {
 target "latest_root" {
     inherits = ["version", "dockerfile", "root", "cross_platform"]
     tags = [
-        "ghcr.io/sambyeol/devbox-devcontainer:0.9.1-root",
-        "ghcr.io/sambyeol/devbox-devcontainer:0.9-root",
+        "ghcr.io/sambyeol/devbox-devcontainer:0.10.3-root",
+        "ghcr.io/sambyeol/devbox-devcontainer:0.10-root",
         "ghcr.io/sambyeol/devbox-devcontainer:0-root",
         "ghcr.io/sambyeol/devbox-devcontainer:latest-root",
     ]
